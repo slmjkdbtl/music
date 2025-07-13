@@ -69,88 +69,92 @@ treble = \fixed c' {
 	bs,1
 	r1
 
-	cs8 bs, cs ds es cs ds es fs ds es gs bs2
-	bs,8 as, bs, cs ds bs, cs ds es ds es fs as2
-	cs8 bs, cs ds es cs ds es fs ds es gs bs4. cs'8
+	cs8 bs, cs ds es cs ds es
+	fs ds es gs bs2
+	bs,8 as, bs, cs ds bs, cs ds
+	es ds es fs as2
+
+	cs8 bs, cs ds es cs ds es
+	fs ds es gs bs4. cs'8
 	\key f \major
 	c'1
 	r2
 
 }
 
-linec = { c4-. g8-. g8-. c4-. g4-. }
-linebf = { bf,4-. f8-. f8-. bf,4-. f4-. }
-linefs = { fs4-. cs'8-. cs'8-. fs4-. cs'4-. }
-linegs = { gs4-. ds'8-. ds'8-. gs4-. ds'4-. }
-linefsl = { fs4-. cs'4-. fs4-. cs'4-. }
-linegsl = { gs4-. ds'4-. gs4-. ds'4-. }
+bassc = { c4-. g8-. g8-. c4-. g4-. }
+bassbf = { bf,4-. f8-. f8-. bf,4-. f4-. }
+bassfs = { fs4-. cs'8-. cs'8-. fs4-. cs'4-. }
+bassgs = { gs4-. ds'8-. ds'8-. gs4-. ds'4-. }
+bassfsl = { fs4-. cs'4-. fs4-. cs'4-. }
+bassgsl = { gs4-. ds'4-. gs4-. ds'4-. }
 
 bass = \fixed c, {
 
 	\clef bass
 	\global
 
-	\linec
-	\linec
-	\linec
-	\linec
+	\bassc
+	\bassc
+	\bassc
+	\bassc
 
-	\linec
-	\linec
-	\linec
-	\linec
+	\bassc
+	\bassc
+	\bassc
+	\bassc
 
-	\linebf
-	\linebf
-	\linec
-	\linec
+	\bassbf
+	\bassbf
+	\bassc
+	\bassc
 
-	\linebf
-	\linebf
-	\linec
-	\linec
+	\bassbf
+	\bassbf
+	\bassc
+	\bassc
 
 	bf,1-.
 	r1
 	bf,1-.
 	r1
 
-	\linebf
-	\linebf
-	\linec
-	\linec
+	\bassbf
+	\bassbf
+	\bassc
+	\bassc
 
 	\key cs \major
 
-	\linefs
-	\linefs
-	\linegs
-	\linegs
+	\bassfs
+	\bassfs
+	\bassgs
+	\bassgs
 
-	\linefs
-	\linefs
-	\linegs
-	\linegs
+	\bassfs
+	\bassfs
+	\bassgs
+	\bassgs
 
-	\linefs
-	\linefs
-	\linegs
-	\linegs
+	\bassfs
+	\bassfs
+	\bassgs
+	\bassgs
 
-	\linefs
-	\linefs
-	\linegs
-	\linegs
+	\bassfs
+	\bassfs
+	\bassgs
+	\bassgs
 
-	\linefsl
-	\linefsl
-	\linegsl
-	\linegsl
+	\bassfsl
+	\bassfsl
+	\bassgsl
+	\bassgsl
 
-	\linefsl
-	\linefsl
+	\bassfsl
+	\bassfsl
 	\key f \major
-	\linec
+	\bassc
 	c1-.
 
 }
