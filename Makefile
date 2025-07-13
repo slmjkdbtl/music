@@ -2,14 +2,14 @@ SRC := $(wildcard *.ly)
 OUTDIR := output
 PDF_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.pdf, $(SRC))
 MIDI_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.midi, $(SRC))
-AUDIO_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.ogg, $(SRC))
+AUDIO_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.mp3, $(SRC))
 SCORE := racoon
 
 .PHONY: all
 all: $(PDF_TARGETS) $(MIDI_TARGETS) $(AUDIO_TARGETS)
 
 .PHONY: play
-play: $(OUTDIR)/$(SCORE).ogg $(OUTDIR)/$(SCORE).pdf
+play: $(OUTDIR)/$(SCORE).mp3 $(OUTDIR)/$(SCORE).pdf
 	open $(word 2,$^)
 	mpv $(word 1,$^)
 
@@ -23,8 +23,8 @@ $(OUTDIR)/%.pdf: %.ly
 $(OUTDIR)/%.midi: %.ly
 	lilypond -dno-print-pages -o $(OUTDIR) $<
 
-$(OUTDIR)/%.ogg: $(OUTDIR)/%.midi
-	timidity $<
+$(OUTDIR)/%.mp3: $(OUTDIR)/%.midi
+	timidity $< -Ow -o - | ffmpeg -f wav -i - -c:a libmp3lame -y $@
 
 $(PDF_TARGETS): | $(OUTDIR)
 $(MIDI_TARGETS): | $(OUTDIR)

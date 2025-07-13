@@ -9,6 +9,7 @@
 
 global = {
 	\key bf \major
+	\numericTimeSignature
 }
 
 intro = {
@@ -21,15 +22,13 @@ rally = {
 	\tempo 4 = 90
 }
 
-% TODO: easier global staccato
-
 flute = \fixed c'' {
 
 	\set Staff.instrumentName = "flute"
 	\set Staff.midiInstrument = "flute"
 	\clef treble
-
 	\global
+
 	\intro
 
 	r r r d8-. c-.
@@ -80,8 +79,8 @@ piano = \fixed c {
 	\set Staff.instrumentName = "piano"
 	\set Staff.midiInstrument = "acoustic grand"
 	\clef bass
-
 	\global
+
 	\intro
 
 	r1
