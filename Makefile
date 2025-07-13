@@ -13,6 +13,10 @@ play: $(OUTDIR)/$(SCORE).ogg $(OUTDIR)/$(SCORE).pdf
 	open $(word 2,$^)
 	mpv $(word 1,$^)
 
+.PHONY: open
+open: $(OUTDIR)/$(SCORE).pdf
+	open $<
+
 $(OUTDIR)/%.pdf: %.ly
 	lilypond --pdf -o $(OUTDIR) $<
 
