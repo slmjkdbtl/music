@@ -8,6 +8,12 @@ SCORE := racoon
 .PHONY: all
 all: $(PDF_TARGETS) $(MIDI_TARGETS) $(AUDIO_TARGETS)
 
+.PHONY: pdf
+pdf: $(OUTDIR)/$(SCORE).pdf
+
+.PHONY: mp3
+mp3: $(OUTDIR)/$(SCORE).mp3
+
 .PHONY: play
 play: $(OUTDIR)/$(SCORE).mp3 $(OUTDIR)/$(SCORE).pdf
 	open $(word 2,$^)
