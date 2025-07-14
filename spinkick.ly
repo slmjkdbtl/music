@@ -16,13 +16,6 @@ global = {
 	\tempo 4 = 100
 }
 
-chordloop = {
-	bf,4 <f a>4 r2 |
-	c4 <g bf>4 r2 |
-	f,4 <c e>4 r2 |
-	f,4 <c e>4 r2 |
-}
-
 clarinet = \fixed c' {
 
 	\set Staff.instrumentName = "clarinet"
@@ -31,26 +24,25 @@ clarinet = \fixed c' {
 	\global
 
 	r1 r1 r1 r1
-	r1 r1 r1 r1
 
 	r8 f, g, a, bf, c d e |
 	f g a bf c' r4 e'8 |
-	r16 c'8 r16 r2. |
+	c'8  r8 r4 r2 |
 	r1 |
 
 	r8 f, g, a, bf, c d e |
 	f g a bf c' r4 e'8 |
-	r16 a8 r16 r2. |
+	a8  r8 r4 r2 |
 	r1 |
 
 	r8 f, g, a, bf, c d e |
 	f g a bf c' r4 e'8 |
-	r16 c'8 r16 r2. |
+	c'8  r8 r4 r2 |
 	r1 |
 
 	r8 f, g, a, bf, c d e |
 	f g a bf c' r4 e'8 |
-	r16 a8 r16 r2. |
+	a8  r8 r4 r2 |
 	r1 |
 
 	c'4. d'8 c'4. d'8 | c'4. bf8 a4 bf4 |
@@ -58,6 +50,13 @@ clarinet = \fixed c' {
 	c'4. d'8 c'4. d'8 | c'4. bf8 a4 g8 f8 |
 	e8 r8 r4 r2 | r1 |
 
+}
+
+chordloop = {
+	bf,4 <f a>4 r2 |
+	c4 <g bf>4 r2 |
+	f,4 <c e>4 r2 |
+	f,4 <c e>4 r2 |
 }
 
 piano = \fixed c' {

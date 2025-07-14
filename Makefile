@@ -41,4 +41,4 @@ $(OUTDIR):
 
 .PHONY: clean
 clean:
-	rm -rf output
+	rm -rf $(OUTDIR)

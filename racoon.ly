@@ -21,7 +21,7 @@ intro = {
 
 rally = {
 	\time 3/4
-	\tempo 4 = 90
+	\tempo 4 = 94
 }
 
 flute = \fixed c'' {
@@ -33,7 +33,7 @@ flute = \fixed c'' {
 
 	\intro
 
-	r r r d8-. c-. |
+	r4 r4 r4 d8-. c8-. |
 
 	d4-. g,-. g,-. d8-. c8-. |
 	d4-. f,-. f,-. d8-. c8-. |
@@ -58,7 +58,7 @@ flute = \fixed c'' {
 
 	g,4-. bf,4..-. d16-. |
 	f4 r f,8.-. f,16-. |
-	g,4-. bf,4..-. g16-. |
+	g,4-. bf,4..-. d16-. |
 	f4 r f,8.-. f,16-. |
 	g,4-. bf,-. d-. |
 	f4-. ef-. d8.-. ef16-. |
@@ -79,13 +79,13 @@ flute = \fixed c'' {
 piano = \fixed c {
 
 	\set Staff.instrumentName = "piano"
-	\set Staff.midiInstrument = "acoustic grand"
+	\set Staff.midiInstrument = "xylophone"
 	\clef bass
 	\global
 
 	\intro
 
-	r1
+	r1 |
 
 	ef4-. r <bf d'>-. r |
 	bf,4-. r <bf d'>-. r |
@@ -128,10 +128,55 @@ piano = \fixed c {
 
 }
 
+tuba = \fixed c, {
+
+	\set Staff.instrumentName = "tuba"
+	\set Staff.midiInstrument = "tuba"
+	\clef bass
+	\global
+
+	\intro
+
+	r1 |
+	r1 r1 r1 r1
+	r1 r1 r1 r1
+
+	\rally
+
+	ef4 r2 |
+	bf,4 r2 |
+	ef4 r2 |
+	bf,4 r2 |
+	ef4 r2 |
+	bf,4 r2 |
+	c4 r2 |
+	f4 r2 |
+
+	ef4 r2 |
+	bf,4 r2 |
+	ef4 r2 |
+	bf,4 r2 |
+	ef4 r2 |
+	bf,4 r2 |
+	c4 r2 |
+	f4 r2 |
+
+	ef2 r4 |
+	bf,2 r4 |
+	ef2 r4 |
+	bf,2 r4 |
+	ef2 r4 |
+	bf,2 r4 |
+	c4 r2 |
+	bf,2 r4 |
+
+}
+
 \score {
 	<<
 		\new Staff \flute
 		\new Staff \piano
+		\new Staff \tuba
 	>>
 	\layout {}
 	\midi {}

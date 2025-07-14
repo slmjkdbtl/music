@@ -10,7 +10,7 @@
 }
 
 global = {
-	\key f \major
+	\key c \major
 	\numericTimeSignature
 	\time 4/4
 	\tempo 4 = 104
@@ -41,6 +41,8 @@ treble = \fixed c' {
 	c1 |
 	r1 |
 
+	\tempo 4 = 114
+
 	<e' c'>8-. <e' c'>8-. <d' bf>8-. c'8-. r8 a4-. bf4-. c'4-. f8-. a8-. bf8-. g4-. |
 	<e' c'>8-. <e' c'>8-. <d' bf>8-. c'8-. r8 a4-. bf4-. c'4-. a,8-. bf,-. c-. d-. e-. |
 
@@ -52,7 +54,7 @@ treble = \fixed c' {
 	\key cs \major
 
 	ds1 |
-	f1 |
+	es |
 	as,1 |
 	bs,2 r8 gs,8 as,8 bs,8 |
 
@@ -71,18 +73,7 @@ treble = \fixed c' {
 	bs,1 |
 	r1 |
 
-	% cs8 bs, cs ds es cs ds es
-	% fs ds es gs bs2
-	% bs,8 as, bs, cs ds bs, cs ds
-	% es ds es fs as2
-
-	% cs8 bs, cs ds es cs ds es
-	% fs ds es gs bs4. cs'8
-	% \key f \major
-	% c'1
-	% r2
-
-	\key f \major
+	\key c \major
 
 	<e' c'>8-. <e' c'>8-. <d' bf>8-. c'8-. r8 a4-. bf4-. c'4-. f8-. a8-. bf8-. g4-. |
 	<e' c'>8-. <e' c'>8-. <d' bf>8-. c'8-. r8 a4-. bf4-. c'4-. a,8-. bf,-. c-. d-. e-. |
@@ -124,7 +115,7 @@ bass = \fixed c, {
 	\bassbf
 	\bassbf
 	\bassc
-	\bassc
+	c4-. g8-. g8-. c4 r4 |
 
 	bf,1-. |
 	r1 |
@@ -156,20 +147,9 @@ bass = \fixed c, {
 	\bassfs
 	\bassfs
 	\bassgs
-	\bassgs
+	gs4-. ds'8-. ds'8-. gs4 r4 |
 
-	% \bassfsl
-	% \bassfsl
-	% \bassgsl
-	% \bassgsl
-
-	% \bassfsl
-	% \bassfsl
-	% \key f \major
-	% \bassc
-	% c1-.
-
-	\key f \major
+	\key c \major
 
 	bf,1-. |
 	r1 |
