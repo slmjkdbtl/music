@@ -21,7 +21,7 @@ intro = {
 
 rally = {
 	\time 3/4
-	\tempo 4 = 94
+	\tempo 4 = 92
 }
 
 flute = \fixed c'' {
@@ -78,8 +78,6 @@ flute = \fixed c'' {
 
 piano = \fixed c {
 
-	\set Staff.instrumentName = "piano"
-	\set Staff.midiInstrument = "xylophone"
 	\clef bass
 	\global
 
@@ -174,9 +172,18 @@ tuba = \fixed c, {
 
 \score {
 	<<
-		\new Staff \flute
-		\new Staff \piano
-		\new Staff \tuba
+		\new Staff \with {
+			instrumentName = "flute"
+			midiInstrument = "flute"
+		} \flute
+		\new Staff \with {
+			instrumentName = "keys"
+			midiInstrument = "xylophone"
+		} \piano
+		\new Staff \with {
+			instrumentName = "tuba"
+			midiInstrument = "tuba"
+		} \tuba
 	>>
 	\layout {}
 	\midi {}

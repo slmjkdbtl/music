@@ -18,8 +18,6 @@ global = {
 
 clarinet = \fixed c' {
 
-	\set Staff.instrumentName = "clarinet"
-	\set Staff.midiInstrument = "clarinet"
 	\clef treble
 	\global
 
@@ -61,8 +59,6 @@ chordloop = {
 
 piano = \fixed c' {
 
-	\set Staff.instrumentName = "piano"
-	\set Staff.midiInstrument = "acoustic grand"
 	\clef bass
 	\global
 
@@ -82,8 +78,14 @@ piano = \fixed c' {
 
 \score {
 	<<
-		\new Staff \clarinet
-		\new Staff \piano
+		\new Staff \with {
+			instrumentName = "clarinet"
+			midiInstrument = "clarinet"
+		} \clarinet
+		\new Staff \with {
+			instrumentName = "piano"
+			midiInstrument = "xylophone"
+		} \piano
 	>>
 	\layout {}
 	\midi {}
