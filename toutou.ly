@@ -66,7 +66,8 @@ treble = \fixed c' {
 	\melodyB
 	\melodyB
 
-	\tempo 4 = 114
+	\bar "||"
+	\tempo 4 = 110
 
 	\melodyBreakA
 
@@ -75,10 +76,27 @@ treble = \fixed c' {
 	c'1 |
 	r2 r8 g8 f8 c8 |
 
+	\bar "||"
 	\key cs \major
 
 	\melodyC
 
+	\bar "||"
+	\key c \major
+
+	\melodyBreakA
+
+	f1 |
+	g2 a4 bf4 |
+	c'1 |
+	r2 r8 g8 f8 c8 |
+
+	\bar "||"
+	\key cs \major
+
+	\melodyC
+
+	\bar "||"
 	\key c \major
 
 	\melodyBreakA
@@ -153,6 +171,15 @@ bass = \fixed c, {
 	\bassbf
 	\bassc
 	c4-. g8-. g8-. c4 r4 |
+
+	\bassBreak
+	\bassB
+
+	\key cs \major
+
+	\bassC
+
+	\key c \major
 
 	\bassBreak
 	\bassB

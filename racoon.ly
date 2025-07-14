@@ -4,7 +4,7 @@
 \language "english"
 
 \header {
-	title = "Racoon Rong"
+	title = "Racoon Song"
 	composer = "tga"
 	tagline = ""
 }
@@ -45,6 +45,7 @@ flute = \fixed c'' {
 	d4-. g,-. g,8-. a,8-. bf,8-. c-. |
 	d4-. f-. f-. f,8.-. f,16 |
 
+	\bar "||"
 	\rally
 
 	g,4-. bf,4..-. d16-. |

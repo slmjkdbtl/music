@@ -83,7 +83,7 @@ piano = \fixed c' {
 			midiInstrument = "clarinet"
 		} \clarinet
 		\new Staff \with {
-			instrumentName = "piano"
+			instrumentName = "keys"
 			midiInstrument = "xylophone"
 		} \piano
 	>>
