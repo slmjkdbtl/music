@@ -16,10 +16,7 @@ global = {
 	\tempo 4 = 100
 }
 
-clarinet = \fixed c' {
-
-	\clef treble
-	\global
+clarinet = {
 
 	r1 r1 r1 r1
 
@@ -57,10 +54,7 @@ chordloop = {
 	f,4 <c e>4 r2 |
 }
 
-piano = \fixed c' {
-
-	\clef bass
-	\global
+piano = {
 
 	\chordloop
 	\chordloop
@@ -81,11 +75,19 @@ piano = \fixed c' {
 		\new Staff \with {
 			instrumentName = "clarinet"
 			midiInstrument = "clarinet"
-		} \clarinet
+		} \fixed c' {
+			\clef treble
+			\global
+			\clarinet
+		}
 		\new Staff \with {
 			instrumentName = "keys"
 			midiInstrument = "xylophone"
-		} \piano
+		} \fixed c' {
+			\clef bass
+			\global
+			\piano
+		}
 	>>
 	\layout {}
 	\midi {}

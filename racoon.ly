@@ -22,18 +22,14 @@ intro = {
 rally = {
 	\time 3/4
 	\tempo 4 = 92
+	\mark "rally"
 }
 
-flute = \fixed c'' {
-
-	\set Staff.instrumentName = "flute"
-	\set Staff.midiInstrument = "flute"
-	\clef treble
-	\global
+flute = {
 
 	\intro
 
-	r4 r4 r4 d8-. c8-. |
+	r2 r4 d8-. c8-. |
 
 	d4-. g,-. g,-. d8-. c8-. |
 	d4-. f,-. f,-. d8-. c8-. |
@@ -77,14 +73,11 @@ flute = \fixed c'' {
 
 }
 
-piano = \fixed c {
-
-	\clef bass
-	\global
+piano = {
 
 	\intro
 
-	r1 |
+	s1 |
 
 	ef4-. r <bf d'>-. r |
 	bf,4-. r <bf d'>-. r |
@@ -127,18 +120,11 @@ piano = \fixed c {
 
 }
 
-tuba = \fixed c, {
-
-	\set Staff.instrumentName = "tuba"
-	\set Staff.midiInstrument = "tuba"
-	\clef bass
-	\global
+tuba = {
 
 	\intro
 
-	r1 |
-	r1 r1 r1 r1
-	r1 r1 r1 r1
+	s1 * 9
 
 	\rally
 
@@ -176,15 +162,27 @@ tuba = \fixed c, {
 		\new Staff \with {
 			instrumentName = "flute"
 			midiInstrument = "flute"
-		} \flute
+		} \fixed c'' {
+			\clef treble
+			\global
+			\flute
+		}
 		\new Staff \with {
 			instrumentName = "keys"
 			midiInstrument = "xylophone"
-		} \piano
+		} \fixed c {
+			\clef bass
+			\global
+			\piano
+		}
 		\new Staff \with {
 			instrumentName = "tuba"
 			midiInstrument = "tuba"
-		} \tuba
+		} \fixed c, {
+			\clef bass
+			\global
+			\tuba
+		}
 	>>
 	\layout {}
 	\midi {}

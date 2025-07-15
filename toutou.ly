@@ -1,5 +1,7 @@
 % 偷偷
 
+% TODO: strings on break start
+
 \version "2.24.4"
 \language "english"
 
@@ -54,9 +56,8 @@ melodyC = {
 
 }
 
-treble = \fixed c' {
+treble = {
 
-	\clef treble
 	\global
 
 	\melodyA
@@ -76,38 +77,24 @@ treble = \fixed c' {
 	c'1 |
 	r2 r8 g8 f8 c8 |
 
-	\bar "||"
-	\key cs \major
-
-	\melodyC
-
-	\bar "||"
-	\key c \major
-
-	\melodyBreakA
-
-	f1 |
-	g2 a4 bf4 |
-	c'1 |
-	r2 r8 g8 f8 c8 |
-
-	\bar "||"
-	\key cs \major
-
-	\melodyC
-
-	\bar "||"
-	\key c \major
-
-	\melodyBreakA
-
-	f1 |
-	g2 a4 bf4 |
-	c'1 |
-	r1 |
+	\repeat volta 2 {
+		\key cs \major
+		\melodyC
+		\bar "||"
+		\key c \major
+		\melodyBreakA
+		f1 |
+		g2 a4 bf4 |
+		c'1 |
+		\alternative {
+			\volta 1 { r2 r8 g8 f8 c8 | }
+			\volta 2 { r1 | }
+		}
+	}
 
 }
 
+% TODO: naming
 bassc = { c4-. g8-. g8-. c4-. g4-. | }
 bassbf = { bf,4-. f8-. f8-. bf,4-. f4-. | }
 bassfs = { fs4-. cs'8-. cs'8-. fs4-. cs'4-. | }
@@ -154,9 +141,8 @@ bassC = {
 
 }
 
-bass = \fixed c, {
+bass = {
 
-	\clef bass
 	\global
 
 	\bassA
@@ -175,39 +161,50 @@ bass = \fixed c, {
 	\bassBreak
 	\bassB
 
-	\key cs \major
-
-	\bassC
-
-	\key c \major
-
-	\bassBreak
-	\bassB
-
-	\key cs \major
-
-	\bassC
-
-	\key c \major
-
-	\bassBreak
-
-	\bassbf
-	\bassbf
-	\bassc
-	c1-. |
+	\repeat volta 2 {
+		\key cs \major
+		\bassC
+		\key c \major
+		\bassBreak
+		\bassbf
+		\bassbf
+		\bassc
+		\alternative {
+			\volta 1 \bassc
+			\volta 2 { c1-. | }
+		}
+	}
 
 }
 
-\score {
+music = {
 	<<
 		\new Staff \with {
 			midiInstrument = "xylophone"
-		} \treble
+		} \fixed c' {
+			\clef treble
+			\treble
+		}
 		\new Staff \with {
 			midiInstrument = "acoustic bass"
-		} \bass
+		} \fixed c, {
+			\clef bass
+			\bass
+		}
 	>>
-	\layout {}
+}
+
+\score {
+	\music
+	\layout {
+		\context {
+			\Staff
+			\RemoveAllEmptyStaves
+		}
+	}
+}
+
+\score {
+	\unfoldRepeats \music
 	\midi {}
 }
