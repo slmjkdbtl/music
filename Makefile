@@ -19,18 +19,18 @@ play: $(OUTDIR)/$(SCORE).mp3 $(OUTDIR)/$(SCORE).pdf
 	open $(word 2,$^)
 	mpv $(word 1,$^)
 
-.PHONY: open
-open: $(OUTDIR)/$(SCORE).pdf
+.PHONY: view
+view: $(OUTDIR)/$(SCORE).pdf
 	open $<
 
 $(OUTDIR)/%.pdf: %.ly
-	lilypond --pdf -o $(OUTDIR) $<
+	lilypond -o $(OUTDIR) $<
 
 $(OUTDIR)/%.midi: %.ly
-	lilypond -dno-print-pages -o $(OUTDIR) $<
+	lilypond -o $(OUTDIR) $<
 
 $(OUTDIR)/%.mp3: $(OUTDIR)/%.midi
-	timidity $< -Ow -o - | ffmpeg -f wav -i - -c:a libmp3lame -y $@
+	timidity $< -Ow -o - | ffmpeg -f wav -i - -y $@
 
 $(PDF_TARGETS): | $(OUTDIR)
 $(MIDI_TARGETS): | $(OUTDIR)

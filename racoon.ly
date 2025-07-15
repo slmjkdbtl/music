@@ -31,15 +31,25 @@ flute = {
 
 	r2 r4 d8-. c8-. |
 
-	d4-. g,-. g,-. d8-. c8-. |
-	d4-. f,-. f,-. d8-. c8-. |
-	d4-. g,-. g,8-. a,8-. bf,8-. c-. |
-	d4-. d-. d-. d8-. c8-. |
+	\repeat volta 2 {
 
-	d4-. g,-. g,-. d8-. c8-. |
-	d4-. f,-. f,-. d8-. c8-. |
-	d4-. g,-. g,8-. a,8-. bf,8-. c-. |
-	d4-. f-. f-. f,8.-. f,16 |
+		d4-. g,-. g,-. d8-. c8-. |
+		d4-. f,-. f,-. d8-. c8-. |
+		d4-. g,-. g,8-. a,8-. bf,8-. c-. |
+		d4-. d-. d-. d8-. c8-. |
+
+		d4-. g,-. g,-. d8-. c8-. |
+		d4-. f,-. f,-. d8-. c8-. |
+		d4-. g,-. g,8-. a,8-. bf,8-. c-. |
+
+		d4-. f-. f-.
+
+		\alternative {
+			\volta 1 { d8-. c8-. }
+			\volta 2 { f,8.-. f,16 }
+		} |
+
+	}
 
 	\bar "||"
 	\rally
@@ -73,41 +83,37 @@ flute = {
 
 }
 
-piano = {
+keys = {
 
 	\intro
 
 	s1 |
 
-	ef4-. r <bf d'>-. r |
-	bf,4-. r <bf d'>-. r |
-	ef4-. r <bf d'>-. r |
-	bf,4-. r <bf d'>-. r |
-
-	ef4-. r <bf d'>-. r |
-	bf,4-. r <bf d'>-. r |
-	ef4-. r <bf d'>-. r |
-	bf,4-. r <bf d'>-. r |
+	\repeat volta 2 {
+		\repeat unfold 3 {
+			ef4-. r <bf d'>-. r |
+			bf,4-. r <bf d'>-. r |
+		}
+		ef4-. r <bf d'>-. r |
+		bf,4-. r <bf d'>-.
+		\alternative {
+			\volta 1 { r }
+			\volta 2 { r }
+		} |
+	}
 
 	\rally
 
-	ef4-. <bf d'>-. <bf d'>-. |
-	bf,4-. <bf d'>-. <bf d'>-. |
-	ef4-. <bf d'>-. <bf d'>-. |
-	bf,4-. <bf d'>-. <bf d'>-. |
-	ef4-. <bf d'>-. <bf d'>-. |
-	bf,4-. <bf d'>-. <bf d'>-. |
-	c4-. <g bf>-. <g bf>-. |
-	f4-. <a c'>-. <a c'>-. |
-
-	ef4-. <bf d'>-. <bf d'>-. |
-	bf,4-. <bf d'>-. <bf d'>-. |
-	ef4-. <bf d'>-. <bf d'>-. |
-	bf,4-. <bf d'>-. <bf d'>-. |
-	ef4-. <bf d'>-. <bf d'>-. |
-	bf,4-. <bf d'>-. <bf d'>-. |
-	c4-. <g bf>-. <g bf>-. |
-	f4-. <a c'>-. <a c'>-. |
+	\repeat unfold 2 {
+		ef4-. <bf d'>-. <bf d'>-. |
+		bf,4-. <bf d'>-. <bf d'>-. |
+		ef4-. <bf d'>-. <bf d'>-. |
+		bf,4-. <bf d'>-. <bf d'>-. |
+		ef4-. <bf d'>-. <bf d'>-. |
+		bf,4-. <bf d'>-. <bf d'>-. |
+		c4-. <g bf>-. <g bf>-. |
+		f4-. <a c'>-. <a c'>-. |
+	}
 
 	<ef bf d'>2. |
 	<bf, f a>2. |
@@ -124,27 +130,29 @@ tuba = {
 
 	\intro
 
-	s1 * 9
+	s1 |
+
+	\repeat volta 2 {
+		s1 * 7
+		s4 * 3
+		\alternative {
+			\volta 1 { s4 }
+			\volta 2 { s4 }
+		}
+	}
 
 	\rally
 
-	ef4 r2 |
-	bf,4 r2 |
-	ef4 r2 |
-	bf,4 r2 |
-	ef4 r2 |
-	bf,4 r2 |
-	c4 r2 |
-	f4 r2 |
-
-	ef4 r2 |
-	bf,4 r2 |
-	ef4 r2 |
-	bf,4 r2 |
-	ef4 r2 |
-	bf,4 r2 |
-	c4 r2 |
-	f4 r2 |
+	\repeat unfold 2 {
+		ef4 r2 |
+		bf,4 r2 |
+		ef4 r2 |
+		bf,4 r2 |
+		ef4 r2 |
+		bf,4 r2 |
+		c4 r2 |
+		f4 r2 |
+	}
 
 	ef2 r4 |
 	bf,2 r4 |
@@ -157,7 +165,7 @@ tuba = {
 
 }
 
-\score {
+music = {
 	<<
 		\new Staff \with {
 			instrumentName = "flute"
@@ -173,7 +181,7 @@ tuba = {
 		} \fixed c {
 			\clef bass
 			\global
-			\piano
+			\keys
 		}
 		\new Staff \with {
 			instrumentName = "tuba"
@@ -184,6 +192,19 @@ tuba = {
 			\tuba
 		}
 	>>
-	\layout {}
+}
+
+\score {
+	\music
+	\layout {
+		\context {
+			\Staff
+			\RemoveAllEmptyStaves
+		}
+	}
+}
+
+\score {
+	\unfoldRepeats \music
 	\midi {}
 }

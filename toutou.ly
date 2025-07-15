@@ -1,7 +1,5 @@
 % 偷偷
 
-% TODO: strings on break start
-
 \version "2.24.4"
 \language "english"
 

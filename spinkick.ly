@@ -4,7 +4,7 @@
 \language "english"
 
 \header {
-	title = "Lil Fang Fantasy Spin Back Kick"
+	title = "Lil Fang Fantasy Spinning Backflip Kick"
 	composer = "tga"
 	tagline = ""
 }
@@ -53,8 +53,8 @@ trumpet = {
 	e8 r8 r2. |
 
 	% outro
-	a8-. r8 r4 g8-. r8 r8 a8-. | e8-. r8 r4 c8-. r4 d16 e16 |
-	f8-. r8 r8 f8-. c'8-. r8 r8 b16 c'16 | a8 r8 r2. |
+	a8 r8 r4 g8 r8 r8 a8 | e8 r8 r4 c8 r4 d16 e16 |
+	f8 r4 f8 c'8 r8 r8 b16 c'16 | a8 r8 r2. |
 
 }
 
@@ -93,20 +93,20 @@ keys = {
 music = {
 	<<
 		\new Staff \with {
-			instrumentName = "clarinet"
-			midiInstrument = "clarinet"
-		} \fixed c' {
-			\clef treble
-			\global
-			\clarinet
-		}
-		\new Staff \with {
 			instrumentName = "trumpet"
 			midiInstrument = "trumpet"
 		} \fixed c' {
 			\clef treble
 			\global
 			\trumpet
+		}
+		\new Staff \with {
+			instrumentName = "clarinet"
+			midiInstrument = "clarinet"
+		} \fixed c' {
+			\clef treble
+			\global
+			\clarinet
 		}
 		\new Staff \with {
 			instrumentName = "keys"

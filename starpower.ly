@@ -20,14 +20,14 @@ introRest = {
 }
 
 motifMelody = {
-	r4 e8 f8 e8 f8 | e2. | r2. | c4 r4 d4 |
+	r4 e8 f8 e8 f8 | e2 r4 | r2. | c4 r4 d4 |
 	e2 r4 | r2. | r2. | r2. |
-	a2. | r2. | r2. | g4 r4 f4 |
+	a2 r4 | r2. | r2. | g4 r4 f4 |
 	g2 r4 | r2. | r2. | r2. |
-	c'2. | r2. | r2. | d'4 r4 c'4 |
+	c'2 r4 | r2. | r2. | d'4 r4 c'4 |
 	b2 r4 | r2 c'4 | g2 r4 | r2 e4
-	a2. | r2. | r2. | a4 b4 c'4
-	d'2. | r2. | r2. | r2.
+	a2 r4 | r2. | r2. | a4 b4 c'4
+	d'2 r4 | r2. | r2. | r2.
 }
 
 trumpet = {
