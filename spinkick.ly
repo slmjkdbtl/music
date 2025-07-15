@@ -13,64 +13,84 @@ global = {
 	\key f \major
 	\numericTimeSignature
 	\time 4/4
-	\tempo 4 = 100
+	\tempo 4 = 54
 }
 
 clarinet = {
 
-	r1 r1 r1 r1
+	s1^"improv" s1 * 3
 
-	r8 f, g, a, bf, c d e |
-	f g a bf c' r4 e'8 |
-	c'8  r8 r4 r2 |
-	r1 |
+	\repeat volta 2 {
+		r16 f, g, a, bf, c d e f g a bf c' r8 e'16 |
+		c'16 r16 r8 r4 r2 |
+		r16 f, g, a, bf, c d e f g a bf c' r8 e'16 |
+		a16 r16 r8 r4 r2 |
+	}
 
-	r8 f, g, a, bf, c d e |
-	f g a bf c' r4 e'8 |
-	a8  r8 r4 r2 |
-	r1 |
+	r4 g'8. f'16 e'8. d'16 e'8. c'16 | a8 r8 d'8. b16 c'8 r8 r16 g16 f e
+	f4 r4 c'4 r8 b16 c'16 | a8 r8 r2.
 
-	r8 f, g, a, bf, c d e |
-	f g a bf c' r4 e'8 |
-	c'8  r8 r4 r2 |
-	r1 |
-
-	r8 f, g, a, bf, c d e |
-	f g a bf c' r4 e'8 |
-	a8  r8 r4 r2 |
-	r1 |
-
-	c'4. d'8 c'4. d'8 | c'4. bf8 a4 bf4 |
-	c'4. d'8 c'4. d'8 | c'4. bf8 a4 bf4 |
-	c'4. d'8 c'4. d'8 | c'4. bf8 a4 g8 f8 |
-	e8 r8 r4 r2 | r1 |
+	bf,8-. bf,-. bf,-. bf,-. c-. c-. c-. c-. |
+	bf,8-. bf,-. bf,-. bf,-. c-. c-. c-. c-. |
+	bf,8-. bf,-. bf,-. bf,-. c-. c-. c-. c-. |
+	f,8-. r8 r2. |
 
 }
 
-chordloop = {
-	bf,4 <f a>4 r2 |
-	c4 <g bf>4 r2 |
-	f,4 <c e>4 r2 |
-	f,4 <c e>4 r2 |
-}
+trumpet = {
 
-piano = {
+	s1 * 4
+	\repeat volta 2 { r1 * 4 }
 
-	\chordloop
-	\chordloop
+	c'8. d'16 c'8. d'16 c'8. bf16 a8 bf8 |
+	c'8. d'16 c'8. d'16 c'8. bf16 a8 bf8 |
+	c'8. d'16 c'8. d'16 c'8. bf16 a8 g16 f16 |
+	e16 r16 r8 r4 r2 |
 
-	\chordloop
-	\chordloop
+	c'16 bf a g a bf c' bf c' bf a g a bf c' r |
+	c'16 bf a g a bf c' bf c' bf a g a bf e' r |
+	c'16 bf a g a bf c' bf c' bf a g a r g f |
+	e8 r8 r2. |
 
-	\chordloop
-	\chordloop
-
-	\chordloop
-	\chordloop
+	% outro
+	a8-. r8 r4 g8-. r8 r8 a8-. | e8-. r8 r4 c8-. r4 d16 e16 |
+	f8-. r8 r8 f8-. c'8-. r8 r8 b16 c'16 | a8 r8 r2. |
 
 }
 
-\score {
+chordsA = {
+	bf,8 <f a>8 r4 c8 <g bf>8 r4 |
+	f,8 <c e>8 r4 f,8 <c e>8 r4 |
+}
+
+chordsB = {
+	\repeat unfold 4 { <bf, f a>8-. }
+	\repeat unfold 4 { <c g bf>8-. } |
+}
+
+keys = {
+
+	\chordsA
+	\chordsA
+	\repeat volta 2 {
+		\chordsA
+		\chordsA
+	}
+	\chordsA
+	\chordsA
+	\chordsB
+	\chordsB
+	\chordsB
+	f,8-. r8 r4 e4-. c4-. |
+
+	% outro
+	\chordsA
+	bf,8 <f a>8 r4 c8 <g bf>8 r4 |
+	f,4 r4 <c e>4 r4 |
+
+}
+
+music = {
 	<<
 		\new Staff \with {
 			instrumentName = "clarinet"
@@ -81,14 +101,30 @@ piano = {
 			\clarinet
 		}
 		\new Staff \with {
+			instrumentName = "trumpet"
+			midiInstrument = "trumpet"
+		} \fixed c' {
+			\clef treble
+			\global
+			\trumpet
+		}
+		\new Staff \with {
 			instrumentName = "keys"
 			midiInstrument = "xylophone"
 		} \fixed c' {
-			\clef bass
+			\clef alto
 			\global
-			\piano
+			\keys
 		}
 	>>
+}
+
+\score {
+	\music
 	\layout {}
+}
+
+\score {
+	\unfoldRepeats \music
 	\midi {}
 }
