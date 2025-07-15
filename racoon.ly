@@ -21,7 +21,7 @@ intro = {
 
 rally = {
 	\time 3/4
-	\tempo 4 = 92
+	\tempo 4 = 94
 	\mark "rally"
 }
 
@@ -29,7 +29,7 @@ flute = {
 
 	\intro
 
-	r2 r4 d8-. c8-. |
+	r2. d8-. c8-. |
 
 	\repeat volta 2 {
 
@@ -51,26 +51,29 @@ flute = {
 
 	}
 
-	\bar "||"
 	\rally
 
-	g,4-. bf,4..-. d16-. |
-	f4 r f,8.-. f,16-. |
-	g,4-. bf,4..-. d16-. |
-	f4 r f,8.-. f,16-. |
-	g,4-. bf,-. d-. |
-	f4-. ef-. d8.-. ef16-. |
-	d4-. c4..-. bf,16-. |
-	c4-. r f,8.-. f,16-. |
+	\repeat volta 2 {
 
-	g,4-. bf,4..-. d16-. |
-	f4 r f,8.-. f,16-. |
-	g,4-. bf,4..-. d16-. |
-	f4 r f,8.-. f,16-. |
-	g,4-. bf,-. d-. |
-	f4-. ef-. d8.-. ef16-. |
-	d'4-. c'4..-. bf16-. |
-	a4-. r f,8.-. f,16-. |
+		g,4-. bf,4..-. d16-. |
+		f4 r f,8.-. f,16-. |
+		g,4-. bf,4..-. d16-. |
+		f4 r f,8.-. f,16-. |
+		g,4-. bf,-. d-. |
+		f4-. ef-. d8.-. ef16-. |
+		d4-. c4..-. bf,16-. |
+		c4-. r f,8.-. f,16-. |
+
+		g,4-. bf,4..-. d16-. |
+		f4 r f,8.-. f,16-. |
+		g,4-. bf,4..-. d16-. |
+		f4 r f,8.-. f,16-. |
+		g,4-. bf,-. d-. |
+		f4-. ef-. d8.-. ef16-. |
+		d'4-. c'4..-. bf16-. |
+		a4-. r f,8.-. f,16-. |
+
+	}
 
 	g,4 bf,4. d8 |
 	f4 r f,8. f,16 |
@@ -104,15 +107,17 @@ keys = {
 
 	\rally
 
-	\repeat unfold 2 {
-		ef4-. <bf d'>-. <bf d'>-. |
-		bf,4-. <bf d'>-. <bf d'>-. |
-		ef4-. <bf d'>-. <bf d'>-. |
-		bf,4-. <bf d'>-. <bf d'>-. |
-		ef4-. <bf d'>-. <bf d'>-. |
-		bf,4-. <bf d'>-. <bf d'>-. |
-		c4-. <g bf>-. <g bf>-. |
-		f4-. <a c'>-. <a c'>-. |
+	\repeat volta 2 {
+		\repeat unfold 2 {
+			ef4-. <bf d'>-. <bf d'>-. |
+			bf,4-. <bf d'>-. <bf d'>-. |
+			ef4-. <bf d'>-. <bf d'>-. |
+			bf,4-. <bf d'>-. <bf d'>-. |
+			ef4-. <bf d'>-. <bf d'>-. |
+			bf,4-. <bf d'>-. <bf d'>-. |
+			c4-. <g bf>-. <g bf>-. |
+			f4-. <a c'>-. <a c'>-. |
+		}
 	}
 
 	<ef bf d'>2. |
@@ -143,15 +148,17 @@ tuba = {
 
 	\rally
 
-	\repeat unfold 2 {
-		ef4 r2 |
-		bf,4 r2 |
-		ef4 r2 |
-		bf,4 r2 |
-		ef4 r2 |
-		bf,4 r2 |
-		c4 r2 |
-		f4 r2 |
+	\repeat volta 2 {
+		\repeat unfold 2 {
+			ef4 r2 |
+			bf,4 r2 |
+			ef4 r2 |
+			bf,4 r2 |
+			ef4 r2 |
+			bf,4 r2 |
+			c4 r2 |
+			f4 r2 |
+		}
 	}
 
 	ef2 r4 |

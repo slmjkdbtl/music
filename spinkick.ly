@@ -18,17 +18,19 @@ global = {
 
 clarinet = {
 
-	s1^"improv" s1 * 3
+	s1 * 2
+	\mark "improv"
+	s1 * 2
 
 	\repeat volta 2 {
 		r16 f, g, a, bf, c d e f g a bf c' r8 e'16 |
-		c'16 r16 r8 r4 r2 |
+		c'16 r16 r8 r2. |
 		r16 f, g, a, bf, c d e f g a bf c' r8 e'16 |
-		a16 r16 r8 r4 r2 |
+		a16 r16 r8 r2. |
 	}
 
-	r4 g'8. f'16 e'8. d'16 e'8. c'16 | a8 r8 d'8. b16 c'8 r8 r16 g16 f e
-	f4 r4 c'4 r8 b16 c'16 | a8 r8 r2.
+	r4 g'8.( f'16 e'8. d'16 e'8. c'16 | a8) r8 d'8.( b16 c'8) r8 r16 g16( f e)
+	f8 r4. c'8 r4 b16( c'16 | a8) r8 r2.
 
 	bf,8-. bf,-. bf,-. bf,-. c-. c-. c-. c-. |
 	bf,8-. bf,-. bf,-. bf,-. c-. c-. c-. c-. |
@@ -42,17 +44,17 @@ trumpet = {
 	s1 * 4
 	\repeat volta 2 { r1 * 4 }
 
-	c'8. d'16 c'8. d'16 c'8. bf16 a8 bf8 |
-	c'8. d'16 c'8. d'16 c'8. bf16 a8 bf8 |
-	c'8. d'16 c'8. d'16 c'8. bf16 a8 g16 f16 |
-	e16 r16 r8 r4 r2 |
+	c'8.( d'16 c'8. d'16 c'8. bf16 a8 bf8) |
+	c'8.( d'16 c'8. d'16 c'8. bf16 a8 bf8) |
+	c'8.( d'16 c'8. d'16 c'8. bf16 a8 g16 f16 |
+	e8) r8 r2. |
 
-	c'16 bf a g a bf c' bf c' bf a g a bf c' r |
-	c'16 bf a g a bf c' bf c' bf a g a bf e' r |
-	c'16 bf a g a bf c' bf c' bf a g a r g f |
-	e8 r8 r2. |
+	c'16( bf a g a bf c' bf) c'( bf a g a bf c') r |
+	c'16( bf a g a bf c' bf) c'( bf a g a bf e') r |
+	c'16( bf a g a bf c' bf) c'( bf a g a) r g( f |
+	e8) r8 r2. |
 
-	% outro
+	\mark "outro"
 	a8 r8 r4 g8 r8 r8 a8 | e8 r8 r4 c8 r4 d16 e16 |
 	f8 r4 f8 c'8 r8 r8 b16 c'16 | a8 r8 r2. |
 
