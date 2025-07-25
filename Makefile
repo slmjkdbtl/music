@@ -3,7 +3,7 @@ OUTDIR := output
 PDF_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.pdf, $(SRC))
 MIDI_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.midi, $(SRC))
 AUDIO_TARGETS := $(patsubst %.ly, $(OUTDIR)/%.mp3, $(SRC))
-SCORE := racoon
+SCORE ?= racoon
 
 .PHONY: all
 all: $(PDF_TARGETS) $(MIDI_TARGETS) $(AUDIO_TARGETS)
