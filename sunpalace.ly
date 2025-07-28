@@ -54,7 +54,7 @@ bass = {
 }
 
 chord = \chordmode {
-	g1:m a:m g:m a:m bf f g:m c
+	g1:m a:m g:m a:m bf:m7 f g:m c
 	\repeat unfold 4 { f1 a:m bf c }
 }
 

@@ -16,25 +16,18 @@ mp3: $(OUTDIR)/$(SCORE).mp3
 
 .PHONY: play
 play: $(OUTDIR)/$(SCORE).mp3 $(OUTDIR)/$(SCORE).pdf
-	open $(word 2,$^)
-	mpv $(word 1,$^)
+	open "$(word 2,$^)"
+	mpv "$(word 1,$^)"
 
 .PHONY: view
 view: $(OUTDIR)/$(SCORE).pdf
 	open $<
 
-$(OUTDIR)/%.pdf: %.ly
-	lilypond -o $(OUTDIR) $<
-
-$(OUTDIR)/%.midi: %.ly
-	lilypond -o $(OUTDIR) $<
+$(OUTDIR)/%.pdf $(OUTDIR)/%.midi: %.ly | $(OUTDIR)
+	lilypond -dno-point-and-click -o $(OUTDIR) $<
 
 $(OUTDIR)/%.mp3: $(OUTDIR)/%.midi
-	timidity $< -Ow -o - | ffmpeg -f wav -i - -y $@
-
-$(PDF_TARGETS): | $(OUTDIR)
-$(MIDI_TARGETS): | $(OUTDIR)
-$(AUDIO_TARGETS): | $(OUTDIR)
+	timidity $< -Ow -o - | ffmpeg -i - -f wav -b:a 128k -y $@
 
 $(OUTDIR):
 	mkdir -p $@

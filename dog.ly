@@ -35,20 +35,24 @@ treble = {
 	r4.. e'16-. r4.. e'16-. |
 	r4.. e'16-. r4.. e'16-. |
 	r4.. e'16-. r4. e'16-. a'16-. |
-	\tempo 4 = 56
+	\tempo 4 = 54
 	\repeat volta 2 {
 		a'4-. g'4-. f'8.-. e'16-. r8-. d'8-. |
 		cs'16-. d'16-. e'16-. r16 r2 r16 c'16-. a16-. b16-. |
 		c'16-. d'16-. a16-. r16 r2 r8 r16 g16-. |
-		a16-. r16 r8 r2
 		\alternative {
-			\volta 1 { r8 e'16-. a'16-. }
-			\volta 2 { r4 }
+			\volta 1 { a16-. r16 r8 r2 r8 e'16-. a'16-. | }
+			\volta 2 { a16-. r16 r8 r2 r4 | }
 		}
 	}
-	\repeat volta 4 {
+	\repeat volta 2 {
 		a4 b4 c'4 r8 r16 a'16 |
 		e'8 r8 r2. |
+		a4 b4 c'4 r8 r16 d'16 |
+		\alternative {
+			\volta 1 { e'8 r8 r2. | }
+			\volta 2 { e'8 r8 r2. | }
+		}
 	}
 }
 
@@ -70,29 +74,33 @@ bass = {
 		f4-. c'-. f-. c'-. |
 		fs4-. cs'-. fs-. cs'-. |
 		f4-. c'-. f-. c'-. |
-		fs4-. cs'-. fs-.
 		\alternative {
-			\volta 1 { cs'4-. }
-			\volta 2 { cs'4-. }
+			\volta 1 { fs4-. cs'-. fs-. cs'4-. | }
+			\volta 2 { fs4-. cs'-. fs-. cs'4-. | }
 		}
 	}
-	\repeat volta 4 {
+	\repeat volta 2 {
 		f4-. c'-. f-. c'-. |
 		fs4-. cs'-. fs-. cs'-. |
+		f4-. c'-. f-. c'-. |
+		\alternative {
+			\volta 1 { fs4-. cs'-. fs-. cs'-. | }
+			\volta 2 { fs4-. cs'-. fs-. r | }
+		}
 	}
 }
 
 music = {
 	<<
 		\new Staff \with {
-			midiInstrument = "voice oohs"
+			midiInstrument = "piccolo"
 		} \fixed c' {
 			\clef treble
 			\global
 			\treble
 		}
 		\new Staff \with {
-			midiInstrument = "voice oohs"
+			midiInstrument = "piccolo"
 		} \fixed c {
 			\clef bass
 			\global
