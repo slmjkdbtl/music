@@ -4,7 +4,7 @@
 \language "english"
 
 \header {
-	title = "Racoon Song"
+	title = "Raccoon Song"
 	composer = "tga"
 	tagline = ""
 }
@@ -53,26 +53,23 @@ flute = {
 
 	\rally
 
-	\repeat volta 2 {
-
-		g,4-. bf,4..-. d16-. |
+	\repeat volta 4 {
+		g,4-. bf,4-. r8. d16-. |
 		f4 r f,8.-. f,16-. |
-		g,4-. bf,4..-. d16-. |
-		f4 r f,8.-. f,16-. |
-		g,4-. bf,-. d-. |
-		f4-. ef-. d8.-. ef16-. |
-		d4-. c4..-. bf,16-. |
-		c4-. r f,8.-. f,16-. |
-
-		g,4-. bf,4..-. d16-. |
-		f4 r f,8.-. f,16-. |
-		g,4-. bf,4..-. d16-. |
+		g,4-. bf,4-. r8. d16-. |
 		f4 r f,8.-. f,16-. |
 		g,4-. bf,-. d-. |
 		f4-. ef-. d8.-. ef16-. |
-		d'4-. c'4..-. bf16-. |
-		a4-. r f,8.-. f,16-. |
-
+		\alternative {
+			\volta 1,2,3 {
+				d4-. c4-. r8. bf,16-. |
+				c4-. r f,8.-. f,16-. |
+			}
+			\volta 4 {
+				d'4-. c'4-. r8. bf16-. |
+				a4-. r f,8.-. f,16-. |
+			}
+		}
 	}
 
 	g,4 bf,4. d8 |
@@ -107,16 +104,22 @@ keys = {
 
 	\rally
 
-	\repeat volta 2 {
-		\repeat unfold 2 {
-			ef4-. <bf d'>-. <bf d'>-. |
-			bf,4-. <bf d'>-. <bf d'>-. |
-			ef4-. <bf d'>-. <bf d'>-. |
-			bf,4-. <bf d'>-. <bf d'>-. |
-			ef4-. <bf d'>-. <bf d'>-. |
-			bf,4-. <bf d'>-. <bf d'>-. |
-			c4-. <g bf>-. <g bf>-. |
-			f4-. <a c'>-. <a c'>-. |
+	\repeat volta 4 {
+		ef4-. <bf d'>-. <bf d'>-. |
+		bf,4-. <bf d'>-. <bf d'>-. |
+		ef4-. <bf d'>-. <bf d'>-. |
+		bf,4-. <bf d'>-. <bf d'>-. |
+		ef4-. <bf d'>-. <bf d'>-. |
+		bf,4-. <bf d'>-. <bf d'>-. |
+		\alternative {
+			\volta 1,2,3 {
+				c4-. <g bf>-. <g bf>-. |
+				f4-. <a c'>-. <a c'>-. |
+			}
+			\volta 4 {
+				c4-. <g bf>-. <g bf>-. |
+				f4-. <a c'>-. <a c'>-. |
+			}
 		}
 	}
 
@@ -148,17 +151,24 @@ tuba = {
 
 	\rally
 
-	\repeat volta 2 {
-		\repeat unfold 2 {
-			ef4 r2 |
-			bf,4 r2 |
-			ef4 r2 |
-			bf,4 r2 |
-			ef4 r2 |
-			bf,4 r2 |
-			c4 r2 |
-			f4 r2 |
+	\repeat volta 4 {
+		ef4 r2 |
+		bf,4 r2 |
+		ef4 r2 |
+		bf,4 r2 |
+		ef4 r2 |
+		bf,4 r2 |
+		\alternative {
+			\volta 1,2,3 {
+				c4 r2 |
+				f4 r2 |
+			}
+			\volta 4 {
+				c4 r2 |
+				f4 r2 |
+			}
 		}
+
 	}
 
 	ef2 r4 |

@@ -52,7 +52,7 @@ music = {
 			\treble
 		}
 		\new Staff \with {
-			midiInstrument = "accordion"
+			midiInstrument = "tuba"
 		} \fixed c {
 			\clef bass
 			\global

@@ -27,7 +27,7 @@ $(OUTDIR)/%.pdf $(OUTDIR)/%.midi: %.ly | $(OUTDIR)
 	lilypond -dno-point-and-click -o $(OUTDIR) $<
 
 $(OUTDIR)/%.mp3: $(OUTDIR)/%.midi
-	timidity $< -Ow -o - | ffmpeg -i - -f wav -b:a 128k -y $@
+	timidity $< -Ow -o - | ffmpeg -f wav -i - -b:a 128k -ar 44100 -y $@
 
 $(OUTDIR):
 	mkdir -p $@
