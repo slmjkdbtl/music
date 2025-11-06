@@ -33,15 +33,19 @@ treble = {
 	c'2 r2 |
 	b2 r4. e8 |
 	e'2 r2 |
-	bf2 r4 df'4 |
+	bf2 r4. df'8 |
 	a'4. as'4 r4 b'16 c''16 |
-	b'4 r2 g'8. gf'32 f'32 |
+	b'4 r2 g'8 gf'16 f'16 |
 	e'4-. r2. |
 
 	fs8 e c fs e c fs e |
 	c fs e c g4 r4 |
 	fs8 e b, fs e b, fs e |
 	b, fs e b, bf,4 r4 |
+	bf,8 df bf, b, d f e f |
+	a8 bf b a bf4 r8 b16 c' |
+	b4 r4 r4 g8 gf16 f16 |
+	e4 r2. |
 
 }
 

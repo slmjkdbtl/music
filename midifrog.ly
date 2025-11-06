@@ -1,10 +1,10 @@
-% 青蛙军团
+% midi蛙声
 
 \version "2.24.4"
 \language "english"
 
 \header {
-	title = "Frog Army"
+	title = "MIDI Frog"
 	composer = "tga"
 	tagline = ""
 }

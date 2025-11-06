@@ -69,14 +69,14 @@ music = {
 			\melody
 		}
 		\new Staff \with {
-			midiInstrument = "acoustic grand"
+			midiInstrument = "xylophone"
 		} \fixed c' {
 			\clef treble
 			\global
 			\pianoRight
 		}
 		\new Staff \with {
-			midiInstrument = "acoustic grand"
+			midiInstrument = "xylophone"
 		} \fixed c {
 			\clef bass
 			\global
