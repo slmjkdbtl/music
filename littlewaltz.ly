@@ -13,7 +13,7 @@ global = {
 	\key g \major
 	\numericTimeSignature
 	\time 3/4
-	\tempo 4 = 148
+	\tempo 4 = 160
 }
 
 treble = {
@@ -23,7 +23,7 @@ treble = {
 	b2 a4 | b2 c'4 | b2. | g2 d4 |
 	g2. | r2 d4 | g2. | r2. |
 
-	g'4 fs' d' | b2 r8 c'16 cs' | d'2. | fs2 g4 |
+	g'4 fs' d' | b2. | \grace { c'4 cs' } d'2. | fs2 g4 |
 	a2 b4 | c'4 d'4 c'16 d' c'8 | b2. | r2. |
 	g2 fs4 | g2 a4 | b2 d4 | d'2. |
 	df'8 d'8 r2 | df'8 d'8 r2 | g2. | r2. |
@@ -54,14 +54,14 @@ bass = {
 music = {
 	<<
 		\new Staff \with {
-			midiInstrument = "acoustic grand"
+			midiInstrument = "clarinet"
 		} \fixed c' {
 			\clef treble
 			\global
 			\treble
 		}
 		\new Staff \with {
-			midiInstrument = "acoustic grand"
+			midiInstrument = "accordion"
 		} \fixed c {
 			\clef bass
 			\global

@@ -20,7 +20,7 @@ gTwo = {
 	\key af \major
 	\numericTimeSignature
 	\time 3/4
-	\tempo 4 = 144
+	\tempo 4 = 136
 }
 
 one = <<
@@ -32,21 +32,24 @@ one = <<
 		\gOne
 		\clef treble
 
-		r1 * 2
-		e'2 r4.. d'16 |
-		b2 r4.. a16 |
-		b2 r4.. e'16 |
-		b2 r4. d'16 e'16 |
-		f'1 |
-		g'2 r4.. a'16 |
-		c'1 |
+		s1 * 2
+		e'2 r4. d'8( |
+		b2) r4.. a16( |
+		b2) r4.. e'16( |
+		b2) r4. d'16( e'16 |
+		f'1) |
+		g'2 r4.. a'16( |
+		c'1) |
 		r1 |
 		f'2 ef'2 |
 		af2 ef'2 |
 		bf2 r2 |
-		r1 |
-		% bf1 |
-		% r1 |
+		r2... ef16 |
+
+		\repeat volta 4 {
+			bf1 |
+			r1 |
+		}
 
 	}
 
@@ -64,7 +67,11 @@ one = <<
 		\repeat unfold 8 { d16 bf f' c' }
 		\repeat unfold 8 { df16 bf f' c' }
 		\repeat unfold 8 { c16 af ef' bf }
-		% \repeat unfold 8 { df16 af ef' bf }
+
+		\repeat volta 4 {
+			<df c'>1
+			<ef c'>1
+		}
 
 	}
 
@@ -79,7 +86,7 @@ two = <<
 		\gTwo
 		\clef treble
 
-		r2. * 8 |
+		s2. * 8 |
 		\repeat volta 4 {
 			r4 c'8 df'8 c'4 | c'4 r4 df'4 | ef'4 r2 | r2. |
 			r4 c'8 df'8 c'4 | c'4 r4 df'4 | ef'4 r2 | f4 g af |
