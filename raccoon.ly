@@ -25,191 +25,184 @@ rally = {
 	\mark "rally"
 }
 
-flute = {
+music = <<
 
-	\intro
+	\new Staff \with {
+		instrumentName = "flute"
+		midiInstrument = "flute"
+	} \fixed c'' {
 
-	r2. d8-. c8-. |
+		\clef treble
+		\global
 
-	\repeat volta 2 {
+		\intro
 
-		d4-. g,-. g,-. d8-. c8-. |
-		d4-. f,-. f,-. d8-. c8-. |
-		d4-. g,-. g,8-. a,8-. bf,8-. c-. |
-		d4-. d-. d-. d8-. c8-. |
+		r2. d8-. c8-. |
 
-		d4-. g,-. g,-. d8-. c8-. |
-		d4-. f,-. f,-. d8-. c8-. |
-		d4-. g,-. g,8-. a,8-. bf,8-. c-. |
+		\repeat volta 2 {
 
-		d4-. f-. f-.
+			d4-. g,-. g,-. d8-. c8-. |
+			d4-. f,-. f,-. d8-. c8-. |
+			d4-. g,-. g,8-. a,8-. bf,8-. c-. |
+			d4-. d-. d-. d8-. c8-. |
 
-		\alternative {
-			\volta 1 { d8-. c8-. }
-			\volta 2 { f,8.-. f,16 }
-		} |
+			d4-. g,-. g,-. d8-. c8-. |
+			d4-. f,-. f,-. d8-. c8-. |
+			d4-. g,-. g,8-. a,8-. bf,8-. c-. |
 
-	}
+			d4-. f-. f-.
 
-	\rally
+			\alternative {
+				\volta 1 { d8-. c8-. }
+				\volta 2 { f,8.-. f,16 }
+			} |
 
-	\repeat volta 4 {
-		g,4-. bf,4-. r8. d16-. |
-		f4 r f,8.-. f,16-. |
-		g,4-. bf,4-. r8. d16-. |
-		f4 r f,8.-. f,16-. |
-		g,4-. bf,-. d-. |
-		f4-. ef-. d8.-. ef16-. |
-		\alternative {
-			\volta 1,2,3 {
-				d4-. c4-. r8. bf,16-. |
-				c4-. r f,8.-. f,16-. |
-			}
-			\volta 4 {
-				d'4-. c'4-. r8. bf16-. |
-				a4-. r f,8.-. f,16-. |
+		}
+
+		\rally
+
+		\repeat volta 4 {
+			g,4-. bf,4-. r8. d16-. |
+			f4 r f,8.-. f,16-. |
+			g,4-. bf,4-. r8. d16-. |
+			f4 r f,8.-. f,16-. |
+			g,4-. bf,-. d-. |
+			f4-. ef-. d8.-. ef16-. |
+			\alternative {
+				\volta 1,2,3 {
+					d4-. c4-. r8. bf,16-. |
+					c4-. r f,8.-. f,16-. |
+				}
+				\volta 4 {
+					d'4-. c'4-. r8. bf16-. |
+					a4-. r f,8.-. f,16-. |
+				}
 			}
 		}
+
+		g,4 bf,4. d8 |
+		f4 r f,8. f,16 |
+		g,4 bf,4. d8 |
+		f4 r f,8. f,16 |
+		g,4 bf,4 d4 |
+		f4 ef d8. ef16 |
+		d4-. c4.-. a,8-. |
+		bf,2. |
+
 	}
 
-	g,4 bf,4. d8 |
-	f4 r f,8. f,16 |
-	g,4 bf,4. d8 |
-	f4 r f,8. f,16 |
-	g,4 bf,4 d4 |
-	f4 ef d8. ef16 |
-	d4-. c4.-. a,8-. |
-	bf,2. |
+	\new Staff \with {
+		instrumentName = "keys"
+		midiInstrument = "xylophone"
+	} \fixed c {
 
-}
+		\clef bass
+		\global
 
-keys = {
+		\intro
 
-	\intro
+		s1 |
 
-	s1 |
-
-	\repeat volta 2 {
-		\repeat unfold 3 {
+		\repeat volta 2 {
+			\repeat unfold 3 {
+				ef4-. r <bf d'>-. r |
+				bf,4-. r <bf d'>-. r |
+			}
 			ef4-. r <bf d'>-. r |
-			bf,4-. r <bf d'>-. r |
+			bf,4-. r <bf d'>-.
+			\alternative {
+				\volta 1 { r }
+				\volta 2 { r }
+			} |
 		}
-		ef4-. r <bf d'>-. r |
-		bf,4-. r <bf d'>-.
-		\alternative {
-			\volta 1 { r }
-			\volta 2 { r }
-		} |
-	}
 
-	\rally
+		\rally
 
-	\repeat volta 4 {
-		ef4-. <bf d'>-. <bf d'>-. |
-		bf,4-. <bf d'>-. <bf d'>-. |
-		ef4-. <bf d'>-. <bf d'>-. |
-		bf,4-. <bf d'>-. <bf d'>-. |
-		ef4-. <bf d'>-. <bf d'>-. |
-		bf,4-. <bf d'>-. <bf d'>-. |
-		\alternative {
-			\volta 1,2,3 {
-				c4-. <g bf>-. <g bf>-. |
-				f4-. <a c'>-. <a c'>-. |
-			}
-			\volta 4 {
-				c4-. <g bf>-. <g bf>-. |
-				f4-. <a c'>-. <a c'>-. |
-			}
-		}
-	}
-
-	<ef bf d'>2. |
-	<bf, f a>2. |
-	<ef bf d'>2. |
-	<bf, f a>2. |
-	<ef bf d'>2. |
-	<bf, f a>2. |
-	c4-. <g bf>-. <g bf>-. |
-	<bf, f a>2. |
-
-}
-
-tuba = {
-
-	\intro
-
-	s1 |
-
-	\repeat volta 2 {
-		s1 * 7
-		s4 * 3
-		\alternative {
-			\volta 1 { s4 }
-			\volta 2 { s4 }
-		}
-	}
-
-	\rally
-
-	\repeat volta 4 {
-		ef4 r2 |
-		bf,4 r2 |
-		ef4 r2 |
-		bf,4 r2 |
-		ef4 r2 |
-		bf,4 r2 |
-		\alternative {
-			\volta 1,2,3 {
-				c4 r2 |
-				f4 r2 |
-			}
-			\volta 4 {
-				c4 r2 |
-				f4 r2 |
+		\repeat volta 4 {
+			ef4-. <bf d'>-. <bf d'>-. |
+			bf,4-. <bf d'>-. <bf d'>-. |
+			ef4-. <bf d'>-. <bf d'>-. |
+			bf,4-. <bf d'>-. <bf d'>-. |
+			ef4-. <bf d'>-. <bf d'>-. |
+			bf,4-. <bf d'>-. <bf d'>-. |
+			\alternative {
+				\volta 1,2,3 {
+					c4-. <g bf>-. <g bf>-. |
+					f4-. <a c'>-. <a c'>-. |
+				}
+				\volta 4 {
+					c4-. <g bf>-. <g bf>-. |
+					f4-. <a c'>-. <a c'>-. |
+				}
 			}
 		}
 
+		<ef bf d'>2. |
+		<bf, f a>2. |
+		<ef bf d'>2. |
+		<bf, f a>2. |
+		<ef bf d'>2. |
+		<bf, f a>2. |
+		c4-. <g bf>-. <g bf>-. |
+		<bf, f a>2. |
+
 	}
 
-	ef2 r4 |
-	bf,2 r4 |
-	ef2 r4 |
-	bf,2 r4 |
-	ef2 r4 |
-	bf,2 r4 |
-	c4 r2 |
-	bf,2 r4 |
+	\new Staff \with {
+		instrumentName = "tuba"
+		midiInstrument = "tuba"
+	} \fixed c, {
 
-}
+		\clef bass
+		\global
 
-music = {
-	<<
-		\new Staff \with {
-			instrumentName = "flute"
-			midiInstrument = "flute"
-		} \fixed c'' {
-			\clef treble
-			\global
-			\flute
+		\intro
+
+		s1 |
+
+		\repeat volta 2 {
+			s1 * 7
+			s4 * 3
+			\alternative {
+				\volta 1 { s4 }
+				\volta 2 { s4 }
+			}
 		}
-		\new Staff \with {
-			instrumentName = "keys"
-			midiInstrument = "xylophone"
-		} \fixed c {
-			\clef bass
-			\global
-			\keys
+
+		\rally
+
+		\repeat volta 4 {
+			ef4 r2 |
+			bf,4 r2 |
+			ef4 r2 |
+			bf,4 r2 |
+			ef4 r2 |
+			bf,4 r2 |
+			\alternative {
+				\volta 1,2,3 {
+					c4 r2 |
+					f4 r2 |
+				}
+				\volta 4 {
+					c4 r2 |
+					f4 r2 |
+				}
+			}
+
 		}
-		\new Staff \with {
-			instrumentName = "tuba"
-			midiInstrument = "tuba"
-		} \fixed c, {
-			\clef bass
-			\global
-			\tuba
-		}
-	>>
-}
+
+		ef2 r4 |
+		bf,2 r4 |
+		ef2 r4 |
+		bf,2 r4 |
+		ef2 r4 |
+		bf,2 r4 |
+		c4 r2 |
+		bf,2 r4 |
+
+	}
+
+>>
 
 \score {
 	\music

@@ -88,6 +88,7 @@ one = <<
 two = <<
 
 	\new Staff \with {
+		instrumentName = "trumpet"
 		midiInstrument = "trumpet"
 	} \fixed c' {
 
@@ -106,10 +107,12 @@ two = <<
 			d'2.~) | d'2. | r2. | r2. |
 		}
 		% TODO
+		\repeat volta 2 { s2. * 32 }
 
 	}
 
 	\new Staff \with {
+		instrumentName = "clarinet"
 		midiInstrument = "clarinet"
 	} \fixed c'' {
 
@@ -133,6 +136,7 @@ two = <<
 	}
 
 	\new Staff \with {
+		instrumentName = "keys"
 		midiInstrument = "xylophone"
 	} \fixed c {
 
@@ -146,6 +150,7 @@ two = <<
 	}
 
 	\new Staff \with {
+		instrumentName = "bass"
 		midiInstrument = "acoustic bass"
 	} \fixed c, {
 
@@ -185,7 +190,6 @@ two = <<
 	\layout {
 		\context {
 			\Staff
-			\RemoveAllEmptyStaves
 		}
 	}
 }
@@ -195,7 +199,6 @@ two = <<
 	\layout {
 		\context {
 			\Staff
-			\RemoveAllEmptyStaves
 		}
 	}
 }

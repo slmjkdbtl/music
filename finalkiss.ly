@@ -91,8 +91,13 @@ two = <<
 			r4 c'8 df'8 c'4 | c'4 r4 df'4 | ef'4 r2 | r2. |
 			r4 c'8 df'8 c'4 | c'4 r4 df'4 | ef'4 r2 | f4 g af |
 			bf4 r2 | ef'4 r2 | c'4 r2 | f4 g af |
-			af4 r2 | r4 bf af4 | ef4 r2 | r2. |
+			af4 r2 |
+			\alternative {
+				\volta 1,2,3 { r4 bf4 af4 | ef4 r2 | r2. | }
+				\volta 4 { r4 bf4 c'4 | bf4 r2 | r2 af4 | }
+			}
 		}
+		af2.~ | af2. | r2. |
 
 	}
 
@@ -115,9 +120,13 @@ two = <<
 			ef4 af c' | ef r2 |
 			c4 g bf | c r2 |
 			f4 af c' | f r2 |
-			bf,4 f af | bf,4 r2 |
-			ef4 g bf | ef r2 |
+			bf,4 f af |
+			\alternative {
+				\volta 1,2,3 { bf,4 r2 | ef4 g bf | ef r2 | }
+				\volta 4 { bf,4 r2 | ef4 g bf | ef r2 | }
+			}
 		}
+		af,4 c ef | c ef c | af, r2 |
 
 	}
 

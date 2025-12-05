@@ -54,44 +54,6 @@ melodyC = {
 
 }
 
-treble = {
-
-	\global
-
-	\melodyA
-	\melodyB
-
-	\melodyA
-	\melodyB
-	\melodyB
-
-	\bar "||"
-	\tempo 4 = 110
-
-	\melodyBreakA
-
-	f1 |
-	g2 a4 bf4 |
-	c'1 |
-	r2 r8 g8 f8 c8 |
-
-	\repeat volta 2 {
-		\key cs \major
-		\melodyC
-		\bar "||"
-		\key c \major
-		\melodyBreakA
-		f1 |
-		g2 a4 bf4 |
-		c'1 |
-		\alternative {
-			\volta 1 { r2 r8 g8 f8 c8 | }
-			\volta 2 { r1 | }
-		}
-	}
-
-}
-
 % TODO: naming
 bassc = { c4-. g8-. g8-. c4-. g4-. | }
 bassbf = { bf,4-. f8-. f8-. bf,4-. f4-. | }
@@ -139,58 +101,89 @@ bassC = {
 
 }
 
-bass = {
+music = <<
 
-	\global
+	\new Staff \with {
+		midiInstrument = "xylophone"
+	} \fixed c' {
 
-	\bassA
-	\bassA
-	\bassB
+		\clef treble
+		\global
 
-	\bassA
-	\bassA
-	\bassB
+		\melodyA
+		\melodyB
 
-	\bassbf
-	\bassbf
-	\bassc
-	c4-. g8-. g8-. c4 r4 |
+		\melodyA
+		\melodyB
+		\melodyB
 
-	\bassBreak
-	\bassB
+		\bar "||"
+		\tempo 4 = 110
 
-	\repeat volta 2 {
-		\key cs \major
-		\bassC
-		\key c \major
-		\bassBreak
+		\melodyBreakA
+
+		f1 |
+		g2 a4 bf4 |
+		c'1 |
+		r2 r8 g8 f8 c8 |
+
+		\repeat volta 2 {
+			\key cs \major
+			\melodyC
+			\bar "||"
+			\key c \major
+			\melodyBreakA
+			f1 |
+			g2 a4 bf4 |
+			c'1 |
+			\alternative {
+				\volta 1 { r2 r8 g8 f8 c8 | }
+				\volta 2 { r1 | }
+			}
+		}
+
+	}
+
+	\new Staff \with {
+		midiInstrument = "acoustic bass"
+	} \fixed c, {
+
+		\clef bass
+		\global
+
+		\bassA
+		\bassA
+		\bassB
+
+		\bassA
+		\bassA
+		\bassB
+
 		\bassbf
 		\bassbf
 		\bassc
-		\alternative {
-			\volta 1 \bassc
-			\volta 2 { c1-. | }
+		c4-. g8-. g8-. c4 r4 |
+
+		\bassBreak
+		\bassB
+
+		\repeat volta 2 {
+			\key cs \major
+			\bassC
+			\key c \major
+			\bassBreak
+			\bassbf
+			\bassbf
+			\bassc
+			\alternative {
+				\volta 1 \bassc
+				\volta 2 { c1-. | }
+			}
 		}
+
 	}
 
-}
-
-music = {
-	<<
-		\new Staff \with {
-			midiInstrument = "xylophone"
-		} \fixed c' {
-			\clef treble
-			\treble
-		}
-		\new Staff \with {
-			midiInstrument = "acoustic bass"
-		} \fixed c, {
-			\clef bass
-			\bass
-		}
-	>>
-}
+>>
 
 \score {
 	\music

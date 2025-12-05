@@ -16,50 +16,49 @@ global = {
 	\tempo 4 = 90
 }
 
-treble = {
-	\repeat volta 4 {
-		<e c>4-. <e c>-. <e c>-. <e c>-. |
-		<e c>-. <e c>-. <e c>-. <e c>8 <ef b,>8 |
-	}
-	\repeat volta 8 {
-		<e c>4-. <e c>-. <e c>-. <e c>-. |
-		<e c>-. <e c>-. <e c>-. <e c>8 <ef b,>8 |
-		<e c>4-. <e c>-. <e c>-. <e c>-. |
-		<e c>-. <e c>-. <e c>-. <e c>8 <ef b,>8 |
-	}
-}
+music = <<
 
-bass = {
-	\repeat volta 4 {
-		s1 |
-		s1 |
-	}
-	\repeat volta 8 {
-		c1~ |
-		c1 |
-		d1~ |
-		d1 |
-	}
-}
+	\new Staff \with {
+		midiInstrument = "piccolo"
+	} \fixed c' {
 
-music = {
-	<<
-		\new Staff \with {
-			midiInstrument = "piccolo"
-		} \fixed c' {
-			\clef treble
-			\global
-			\treble
+		\clef treble
+		\global
+
+		\repeat volta 4 {
+			<e c>4-. <e c>-. <e c>-. <e c>-. |
+			<e c>-. <e c>-. <e c>-. <e c>8 <ef b,>8 |
 		}
-		\new Staff \with {
-			midiInstrument = "tuba"
-		} \fixed c {
-			\clef bass
-			\global
-			\bass
+		\repeat volta 8 {
+			<e c>4-. <e c>-. <e c>-. <e c>-. |
+			<e c>-. <e c>-. <e c>-. <e c>8 <ef b,>8 |
+			<e c>4-. <e c>-. <e c>-. <e c>-. |
+			<e c>-. <e c>-. <e c>-. <e c>8 <ef b,>8 |
 		}
-	>>
-}
+
+	}
+
+	\new Staff \with {
+		midiInstrument = "tuba"
+	} \fixed c {
+
+		\clef bass
+		\global
+
+		\repeat volta 4 {
+			s1 |
+			s1 |
+		}
+		\repeat volta 8 {
+			c1~ |
+			c1 |
+			d1~ |
+			d1 |
+		}
+
+	}
+
+>>
 
 \score {
 	\music
