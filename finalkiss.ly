@@ -4,7 +4,7 @@
 \language "english"
 
 \header {
-	title = "Final Kiss"
+	title = "Final Kiss On Earth"
 	composer = "tga"
 	tagline = ""
 }

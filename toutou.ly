@@ -25,7 +25,7 @@ melodyB = {
 	f,1 | g,2 a,4 bf,4 | c1 | r1 |
 }
 
-melodyBreakA = {
+melodyBreak = {
 	<e' c'>8-. <e' c'>8-. <d' bf>8-. c'8-. r8 a4-. bf4-. c'4-. f8-. a8-. bf8-. g4-. |
 	<e' c'>8-. <e' c'>8-. <d' bf>8-. c'8-. r8 a4-. bf4-. c'4-. a,8-. bf,-. c-. d-. e-. |
 }
@@ -120,7 +120,7 @@ music = <<
 		\bar "||"
 		\tempo 4 = 110
 
-		\melodyBreakA
+		\melodyBreak
 
 		f1 |
 		g2 a4 bf4 |
@@ -132,7 +132,7 @@ music = <<
 			\melodyC
 			\bar "||"
 			\key c \major
-			\melodyBreakA
+			\melodyBreak
 			f1 |
 			g2 a4 bf4 |
 			c'1 |
