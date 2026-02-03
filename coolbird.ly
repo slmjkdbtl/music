@@ -63,8 +63,8 @@ music = <<
 		\keys
 		g8 b d' b d' b d' b | gf bf d' bf d'2 |
 		f8 bf d' bf d' bf d' bf | e bf d' bf d'2 |
-		ef8 bf d' bf d' bf d' bf | d bf d' bf d'2 |
-		df8 bf d' bf d' bf d' bf | d e fs g a4 b4 |
+		f8 af c' af c' af c' af | e af c' af c'2 |
+		ef8 af c' af c' af c' af | d e fs g a4 b4 |
 		\keys
 		<d g b>1 |
 
