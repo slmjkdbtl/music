@@ -20,27 +20,27 @@ chordLoop = {
 	c <g b>4 <g b>4 | c <g b>4 <g b>4 | c4 r2 | r2. |
 }
 
-gOne = {
+globalA = {
 	\key c \major
 	\numericTimeSignature
 	\tempo 4 = 70
 	\time 4/4
 }
 
-gTwo = {
+globalB = {
 	\key c \major
 	\numericTimeSignature
 	\tempo 4 = 164
 	\time 3/4
 }
 
-one = <<
+partA = <<
 
 	\new Staff \with {
 		midiInstrument = "xylophone"
 	} \fixed c'' {
 
-		\gOne
+		\globalA
 		\clef treble
 
 		\repeat unfold 2 {
@@ -60,7 +60,7 @@ one = <<
 		midiInstrument = "xylophone"
 	} \fixed c {
 
-		\gOne
+		\globalA
 		\clef bass
 
 		a4 r4 e'4 r4 |
@@ -85,14 +85,14 @@ one = <<
 
 >>
 
-two = <<
+partB = <<
 
 	\new Staff \with {
 		instrumentName = "trumpet"
 		midiInstrument = "trumpet"
 	} \fixed c' {
 
-		\gTwo
+		\globalB
 		\clef treble
 
 		s2. * 4
@@ -116,7 +116,7 @@ two = <<
 		midiInstrument = "clarinet"
 	} \fixed c'' {
 
-		\gTwo
+		\globalB
 		\clef treble
 
 		s2. * 4
@@ -140,7 +140,7 @@ two = <<
 		midiInstrument = "xylophone"
 	} \fixed c {
 
-		\gTwo
+		\globalB
 		\clef bass
 
 		\repeat unfold 4 { a4 <c' e'>4 <c' e'>4 | }
@@ -154,7 +154,7 @@ two = <<
 		midiInstrument = "acoustic bass"
 	} \fixed c, {
 
-		\gTwo
+		\globalB
 		\clef bass
 
 		s2. * 4
@@ -186,7 +186,7 @@ two = <<
 >>
 
 \score {
-	\one
+	\partA
 	\layout {
 		\context {
 			\Staff
@@ -195,7 +195,7 @@ two = <<
 }
 
 \score {
-	\two
+	\partB
 	\layout {
 		\context {
 			\Staff
@@ -204,6 +204,6 @@ two = <<
 }
 
 \score {
-	\unfoldRepeats { \one \two }
+	\unfoldRepeats { \partA \partB }
 	\midi {}
 }

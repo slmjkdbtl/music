@@ -16,14 +16,14 @@ global = {
 	\tempo 4 = 120
 }
 
-bird = {
+birdA = {
 	d4-. d4-. d4-. d4-. | d4-. d8.-. e16-. d2-. |
 	d4-. d4-. d4-. d4-. | d4-. d8.-. e16-. d2-. |
 	d4-. d4-. d2-.      | d4-. d4-. d2-.        |
 	e4-. e4-. e4-. e4-. | d4-. d8.-. e16-. d2-. |
 }
 
-keys = {
+chordsA = {
 	<g b d'>4-. <g b d'>4-. <g b d'>4-. <g b d'>4-. |
 	<gf bf d'>4-. <gf bf d'>8.-. <gf bf d'>16-. <gf bf d'>2-. |
 	<g b d'>4-. <g b d'>4-. <g b d'>4-. <g b d'>4-. |
@@ -43,12 +43,12 @@ music = <<
 		\clef treble
 		\global
 
-		\bird
+		\birdA
 		d1 | d1 |
 		d1 | d1 |
 		d1 | d1 |
 		d1 | d1 |
-		\bird
+		\birdA
 		d1 |
 
 	}
@@ -60,12 +60,12 @@ music = <<
 		\clef bass
 		\global
 
-		\keys
+		\chordsA
 		g8 b d' b d' b d' b | gf bf d' bf d'2 |
 		f8 bf d' bf d' bf d' bf | e bf d' bf d'2 |
 		f8 af c' af c' af c' af | e af c' af c'2 |
 		ef8 af c' af c' af c' af | d e fs g a4 b4 |
-		\keys
+		\chordsA
 		<d g b>1 |
 
 	}

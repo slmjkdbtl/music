@@ -38,7 +38,7 @@ rhythmB =
 	r2.
 #})
 
-trebleMotif = {
+melodyA = {
 	\repeat volta 2 {
 		e2.~ | e2. | r2 e4 | e4 f4 g4 |
 		e2.~ | e2. | r2. | e4 f4 g4 |
@@ -47,7 +47,7 @@ trebleMotif = {
 	}
 }
 
-bassMotif = {
+chordsA = {
 	\repeat volta 2 {
 		\repeat unfold 2 {
 			\rhythmA f c' e'
@@ -65,7 +65,7 @@ music = <<
 		\clef treble
 		\global
 
-		\trebleMotif
+		\melodyA
 
 		a2. | bf2. | c'2. | d'2. |
 		f2.~ | f2. | r2. | r2. |
@@ -82,7 +82,7 @@ music = <<
 		af2.~ | af4 r4 bf4 | b2. | r2. |
 
 		\key c \major
-		\trebleMotif
+		\melodyA
 
 	}
 
@@ -93,7 +93,7 @@ music = <<
 		\clef bass
 		\global
 
-		\bassMotif
+		\chordsA
 
 		\rhythmA ef bf d'
 		\rhythmA d a c'
@@ -108,7 +108,7 @@ music = <<
 		\rhythmB e af b
 
 		\key c \major
-		\bassMotif
+		\chordsA
 
 	}
 

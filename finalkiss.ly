@@ -9,14 +9,14 @@
 	tagline = ""
 }
 
-gOne = {
+globalA = {
 	\key c \major
 	\numericTimeSignature
 	\time 4/4
 	\tempo 4 = 60
 }
 
-gTwo = {
+globalB = {
 	\key af \major
 	\numericTimeSignature
 	\time 3/4
@@ -29,7 +29,7 @@ one = <<
 		midiInstrument = "acoustic grand"
 	} \fixed c' {
 
-		\gOne
+		\globalA
 		\clef treble
 
 		s1 * 2
@@ -57,7 +57,7 @@ one = <<
 		midiInstrument = "acoustic grand"
 	} \fixed c {
 
-		\gOne
+		\globalA
 		\clef bass
 
 		\repeat unfold 8 { f16 d' g' e' }
@@ -83,7 +83,7 @@ two = <<
 		midiInstrument = "acoustic grand"
 	} \fixed c' {
 
-		\gTwo
+		\globalB
 		\clef treble
 
 		s2. * 8 |
@@ -105,7 +105,7 @@ two = <<
 		midiInstrument = "acoustic grand"
 	} \fixed c {
 
-		\gTwo
+		\globalB
 		\clef bass
 
 		df4 af c' | df r2 |

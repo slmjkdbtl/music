@@ -35,7 +35,7 @@ music = <<
 	}
 
 	\new Staff \with {
-		midiInstrument = "xylophone"
+		midiInstrument = "acoustic grand"
 	} \fixed c' {
 		\clef treble
 		\global
@@ -58,7 +58,7 @@ music = <<
 	}
 
 	\new Staff \with {
-		midiInstrument = "xylophone"
+		midiInstrument = "acoustic grand"
 	} \fixed c {
 
 		\clef bass
