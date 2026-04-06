@@ -13,7 +13,7 @@ global = {
 	\key g \minor
 	\numericTimeSignature
 	\time 4/4
-	\tempo 4 = 112
+	\tempo 4 = 114
 }
 
 rhythmA =
@@ -39,6 +39,18 @@ melodyA = {
 	g1~ | g1 | \grace { a4 bf } b1~ | b4 r2. |
 }
 
+melodyB = {
+	c'1~ | c'4 bf af gf | f1~ | f4 gf af bf |
+	c'1~ | c'4 ef'2 df'4 | bf1~ | bf1 |
+	d'1~ | d'4 f'2 ef'4 | d'2. c'4 | a2 r4 bf4 |
+	c'1~ | c'4 bf2 af4 | g1~ | g4 r2. |
+}
+
+melodyC = {
+	\mark "improv"
+	s1 * 4
+}
+
 chordsA = {
 	\rhythmA g bf d'
 	\rhythmA a c' d'
@@ -48,6 +60,22 @@ chordsA = {
 	\rhythmA f af c'
 	\rhythmA g bf d'
 	\rhythmB g b d'
+}
+
+chordsB = {
+	\rhythmA f af c'
+	\rhythmA gf bf ef'
+	\rhythmA f af c'
+	\rhythmA gf bf ef'
+	\rhythmA g bf d'
+	\rhythmA a c' d'
+	\rhythmA af c' d'
+	\rhythmB g bf d'
+}
+
+chordsC = {
+	<g bf d'>1~ | <g bf d'>1 |
+	<a c' d'>1~ | <a c' d'>1 |
 }
 
 music = <<
@@ -62,12 +90,9 @@ music = <<
 		s1 * 4
 
 		\repeat volta 2 \melodyA
-
-		c'1~ | c'4 bf af gf | f1~ | f4 gf af bf |
-		c'1~ | c'4 ef'2 df'4 | bf1~ | bf1 |
-		d'1~ | d'4 f'2 ef'4 | d'2. c'4 | a2 r4 bf4 |
-		c'1~ | c'4 bf2 af4 | g1~ | g4 r2. |
-
+		\melodyB
+		\repeat volta 4 \melodyC
+		s1 * 4
 		\melodyA
 
 	}
@@ -83,16 +108,10 @@ music = <<
 		\rhythmA g bf d'
 
 		\repeat volta 2 \chordsA
-
-		\rhythmA f af c'
-		\rhythmA gf bf ef'
-		\rhythmA f af c'
-		\rhythmA gf bf ef'
+		\chordsB
+		\repeat volta 4 \chordsC
 		\rhythmA g bf d'
-		\rhythmA a c' d'
-		\rhythmA af c' d'
-		\rhythmB g bf d'
-
+		\rhythmA g bf d'
 		\chordsA
 
 	}
